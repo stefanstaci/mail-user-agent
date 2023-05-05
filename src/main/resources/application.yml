@@ -1,0 +1,18 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /api
+
+spring:
+  mail:
+    host: smtp.office365.com
+    port: 587
+    username: ${EMAIL_USERNAME}
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        from: ${spring.mail.username}
+        smtp:
+          starttls:
+            enable: true
+    test-connection: on
